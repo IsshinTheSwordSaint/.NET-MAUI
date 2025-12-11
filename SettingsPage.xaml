@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui" 
+
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+
+    x:Class="Zadania.SettingsPage" 
+
+    Title="Ustawienia">
+
+    <StackLayout Padding="20">
+
+        <Label Text="Motyw" 
+
+    FontSize="18" 
+
+    FontAttributes="Bold" />
+
+
+
+        <Grid ColumnDefinitions="*,Auto" Margin="0,10">
+
+            <Label Text="Tryb ciemny" VerticalOptions="Center" />
+
+            <Switch Grid.Column="1" 
+
+     Toggled="OnThemeToggled" />
+
+        </Grid>
+
+    </StackLayout>
+
+</ContentPage> 

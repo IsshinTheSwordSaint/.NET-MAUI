@@ -8,6 +8,12 @@
     FlyoutBehavior="Flyout">
 
     <TabBar>
+        <Tab Title=" 15.4">
+            <ShellContent
+                Title="Ustawienia"
+                ContentTemplate="{DataTemplate local:SettingsPage}"
+                Route="SettingsPage" />
+        </Tab>
         <Tab Title="15.3">
             <ShellContent
                 Title="Sklep"
