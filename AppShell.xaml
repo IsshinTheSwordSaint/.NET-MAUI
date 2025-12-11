@@ -4,11 +4,22 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Zadania"
-    Title="Zadania">
+    Title="Zadania"
+    FlyoutBehavior="Flyout">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <TabBar>
+        <Tab Title="15.3">
+            <ShellContent
+                Title="Sklep"
+                ContentTemplate="{DataTemplate local:Sklep}"
+                Route="Sklep" />
+        </Tab>
+        <Tab Title="15.2">
+            <ShellContent
+                Title="Rejestracja"
+                ContentTemplate="{DataTemplate local:Rejestracja}"
+                Route="Rejestracja" />
+        </Tab>
+    </TabBar>
 
 </Shell>

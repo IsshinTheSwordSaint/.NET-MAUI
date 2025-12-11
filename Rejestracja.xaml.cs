@@ -1,8 +1,8 @@
 ﻿namespace Zadania
-{
-    public partial class MainPage : ContentPage
+{   
+    public partial class Rejestracja : ContentPage
     {
-        public MainPage()
+        public Rejestracja()
         {
             InitializeComponent();
         }
