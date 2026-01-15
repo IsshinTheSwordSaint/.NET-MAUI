@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Zadania.Zadanie16_3"
+             Title="Zadanie16_3">
+    <HorizontalStackLayout>
+    <VerticalStackLayout 
+        Padding="20" 
+        Spacing="15"
+        WidthRequest="900">
+        <Border
+            StrokeThickness="0"
+            Stroke="#00000000"
+            Background="#00000000"
+            StrokeShape="RoundRectangle 50,50,50,50"
+            HeightRequest="100"
+            WidthRequest="100">
+                <Image
+                    Source="awatar.png"
+                    Aspect="AspectFill"
+                    HeightRequest="100"
+                    WidthRequest="100" />
+        </Border>
+        <Label
+            Text="Dane osobowe"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            FontSize="Large"
+            FontAttributes="Bold"/>
+        <Entry
+            x:Name="ImieEntry"
+            Placeholder="Imie"
+            Margin="3"
+            FontSize="Medium"
+            />
+        <Entry
+            x:Name="NazwiskoEntry"
+            Placeholder="Nazwisko"
+            Margin="3"
+            FontSize="Medium"
+            />
+        <Entry
+            x:Name="EmailEntry"
+            Placeholder="E-mail"
+            Keyboard="Email"
+            Margin="3"
+            FontSize="Medium"/>
+        <Entry
+            x:Name="TelefonEntry"
+            Placeholder="Telefon"
+            Margin="3"
+            FontSize="Medium"
+            />
+        
+        <HorizontalStackLayout
+            Padding="25"
+            Spacing="15"
+            HorizontalOptions="Center">
+                <Button
+                    Text="Zapisz zmiany"
+                    BackgroundColor="Green"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    TextColor="white"
+                    x:Name="SaveBtn"/>
+                <Button
+                    Text="Anuluj"
+                    BackgroundColor="Gray"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    TextColor="white"
+                    x:Name="CancelBtn"/>
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+        
+    <VerticalStackLayout 
+        WidthRequest="300"
+        Margin="50">
+            <Label
+                Text="Ustawienia" 
+                HorizontalOptions="Center"
+                FontSize="Large"
+                FontAttributes="Bold"/>
+            <HorizontalStackLayout
+                VerticalOptions="Start">
+                <Label
+                    VerticalTextAlignment="Start"
+                Text="Powiadomienia e-mail"
+                FontSize="Medium"
+                Margin="5"/>
+
+                <Switch x:Name="EmailNotiSw"
+                        HorizontalOptions="Start"/>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                >
+                <Label
+                    VerticalTextAlignment="Start"
+                    Text="Powiadomienia push"
+                    FontSize="Medium"
+                    Margin="5"/>
+                <Switch x:Name="PushNotifSw"
+                        HorizontalOptions="Start"/>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout >
+                <Label
+                    Text="Tryb ciemny"
+                    FontSize="Medium"
+                    Margin="5"/>
+                <Switch x:Name="DarkModeSw"
+                        HorizontalOptions="Start"/>
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+    </HorizontalStackLayout>
+
+
+</ContentPage>

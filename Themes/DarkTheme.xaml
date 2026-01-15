@@ -14,4 +14,5 @@
     <Color x:Key="PrimaryColor">#451ea8</Color>
 
     <Color x:Key="BorderColor">#451ea8</Color>
+    <Color x:Key="EntryBackgroundColor">#2C2C2C</Color>
 </ResourceDictionary>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Zadania.Zadanie16_4"
+             Title="Zadanie16_4">
+    <VerticalStackLayout
+        HorizontalOptions="Center"
+                         Margin="30"
+                         Padding="30"
+                         Spacing="20"
+
+        
+    >
+        <Grid RowDefinitions="33,33,33,33"
+              ColumnDefinitions="220,220,220"
+              RowSpacing="15"
+              ColumnSpacing="15"
+              BackgroundColor="SkyBlue"
+              >
+            <Label
+                FontAttributes="Bold"
+TextColor="White"
+                Grid.Row="0"
+                Grid.Column="0"
+                Text="Podaj rachunek: "
+                BackgroundColor="Green"
+                VerticalOptions="Center"
+                Padding="6"
+            />
+
+            <Entry 
+                FontAttributes="Bold"
+                TextColor="White"
+                Grid.Row="0"
+                Grid.Column="1"
+                BackgroundColor="Green"
+                
+            />
+            <Label
+                FontAttributes="Bold"
+                BackgroundColor="Yellow"
+                Grid.Row="1"
+                Grid.Column="0"
+                VerticalOptions="Center"
+                Padding="6"
+                Text="Podaj % napiwku: "    />
+            <HorizontalStackLayout
+                Grid.Row="1"
+                Grid.Column="1"
+                BackgroundColor="Yellow">
+                <Slider
+                HorizontalOptions="Start"
+                Grid.Row="1"
+                Grid.Column="1"
+                WidthRequest="100"
+
+                Minimum="0"
+                Maximum="30"
+            />
+            </HorizontalStackLayout>
+            <Label
+                FontAttributes="Bold"
+                VerticalOptions="Center"
+                Padding="6,2,5,6"
+                HorizontalOptions="End"
+                Text="Napiwek: X%"
+                Grid.Row="1"
+                Grid.Column="1"
+                x:Name="ShowPercentage"
+                />
+            
+            <Stepper
+                
+                BackgroundColor="Purple"
+                HorizontalOptions="Center"
+                Grid.Row="2"
+                Grid.Column="1"
+                x:Name="StepperNumber"
+                Minimum="1"
+                Maximum="10"
+            />
+            <Label
+                FontAttributes="Bold"
+TextColor="White"
+                VerticalOptions="Center"
+                Padding="6"
+                BackgroundColor="Purple"
+                Text="Liczba osób: X"
+                Grid.Row="2"
+                Grid.Column="0"
+                x:Name="ShowNumber"    
+            />
+            <Button
+                Grid.Row="3"
+                Grid.Column="0"
+                    Text="Oblicz"
+                BackgroundColor="Blue"
+                FontAttributes="Bold"
+                TextColor="White"/>
+            <Button
+                Grid.Row="3"
+                Grid.Column="1"
+                    Text="Wyczyść"
+                BackgroundColor="Red"
+                FontAttributes="Bold"
+                TextColor="White"/>
+            <Label 
+                Text="Wyniki:"
+                FontAttributes="Bold"
+                TextColor="White"
+                BackgroundColor="LightGreen"
+                Grid.Row="0"
+                Grid.Column="2"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"
+                />
+            <Label
+                FontAttributes="Bold"
+                TextColor="White"
+                BackgroundColor="LightGreen"
+                Grid.Row="1"
+                Grid.Column="2"
+                Text="Kwota napiwku: X"/>
+            <Label
+                FontAttributes="Bold"
+                TextColor="White"
+                BackgroundColor="LightGreen"
+                Grid.Row="2"
+                Grid.Column="2"
+                Text="Kwota na osobę: X"/>
+            <Label
+                FontAttributes="Bold"
+                TextColor="White"
+                BackgroundColor="LightGreen"
+                Grid.Row="3"
+                Grid.Column="2"
+                Text="Suma do zapłaty: X"/>
+
+
+        </Grid>
+        
+
+    </VerticalStackLayout>
+</ContentPage>
