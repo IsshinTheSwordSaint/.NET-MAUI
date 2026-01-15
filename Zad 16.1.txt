@@ -1,0 +1,12 @@
+1.
+1)xmlns="http://schemas.microsoft.com/dotnet/2021/maui" - definiuje glowna przestrzen nazw frameworku MAUI
+2)xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" - przestrzen nazw dajaca dostep do specjalnych konstrukcji (np. x:Name czy x:Class)
+3)xmlns:local="clr-namespace:SklepInternetowy" - przestrzen nazw lokalna dla klasy `ProduktPage`. Umozliwia korzystanie z wlasnej klasy
+2.
+Elementy z x:Name: nazwaLabel, zdjecieImage, cenaLabel – do odnawiania w kodzie C#.
+3.
+Przykład składni: <Label.TextColor>Gray</Label.TextColor> → atrybut: TextColor="Gray".
+4.
+Pełna nazwa klasy: SklepInternetowy.ProduktPage.
+5.
+Element: VerticalStackLayout (właściwość Content dla ContentPage).
