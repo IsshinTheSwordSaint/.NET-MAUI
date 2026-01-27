@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Zadania.Zadanie17_4"
+             Title="Zadanie17_4">
+    <VerticalStackLayout>
+        <VerticalStackLayout
+            Spacing="20">
+            <Label 
+                FontSize="Large"
+            Text="Moja Galeria"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"/>
+            <Button
+            Text="Dodaj zdjęcie"
+            BackgroundColor="CadetBlue"
+            TextColor="White"
+            Margin="10"/>
+        </VerticalStackLayout>
+        <VerticalStackLayout>
+
+            <ScrollView>
+                <FlexLayout
+                    x:Name="photosWrap"
+                    Wrap="Wrap"
+                    JustifyContent="SpaceAround"
+                    >
+                    <Grid HeightRequest="100" WidthRequest="100">
+                        <BoxView BackgroundColor="CadetBlue" WidthRequest="100" HeightRequest="100"/>
+                        <Image 
+                              Source="dotnet_bot.png"
+                              HeightRequest="100"
+                              WidthRequest="100">
+
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="alert"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </Grid>
+                    <Grid HeightRequest="100" WidthRequest="100">
+                        <BoxView BackgroundColor="Pink" WidthRequest="100" HeightRequest="100"/>
+                        <Image 
+                              Source="dotnet_bot.png"
+                              HeightRequest="100"
+                              WidthRequest="100">
+
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="alert"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </Grid>
+                    <Grid HeightRequest="100" WidthRequest="100">
+                        <BoxView BackgroundColor="Yellow" WidthRequest="100" HeightRequest="100"/>
+                        <Image 
+                             Source="dotnet_bot.png"
+                             HeightRequest="100"
+                             WidthRequest="100">
+
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="alert"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </Grid>
+                    <Grid HeightRequest="100" WidthRequest="100">
+                        <BoxView BackgroundColor="Aqua" WidthRequest="100" HeightRequest="100"/>
+                        <Image 
+                             Source="dotnet_bot.png"
+                             HeightRequest="100"
+                             WidthRequest="100">
+
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="alert"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </Grid>
+                    <Grid HeightRequest="100" WidthRequest="100">
+                        <BoxView BackgroundColor="IndianRed" WidthRequest="100" HeightRequest="100"/>
+                        <Image 
+                             Source="dotnet_bot.png"
+                             HeightRequest="100"
+                             WidthRequest="100">
+
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="alert"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </Grid>
+                    <Grid HeightRequest="100" WidthRequest="100">
+                        <BoxView BackgroundColor="Green" WidthRequest="100" HeightRequest="100"/>
+                        <Image 
+                              Source="dotnet_bot.png"
+                              HeightRequest="100"
+                              WidthRequest="100">
+
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="alert"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </Grid>
+                    <Grid HeightRequest="100" WidthRequest="100">
+                        <BoxView BackgroundColor="PaleVioletRed" WidthRequest="100" HeightRequest="100"/>
+                        <Image 
+                              Source="dotnet_bot.png"
+                              HeightRequest="100"
+                              WidthRequest="100">
+
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="alert"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </Grid>
+                </FlexLayout>
+            </ScrollView>
+        </VerticalStackLayout>
+        <VerticalStackLayout
+            Margin="10">
+            <Label
+                 x:Name="photoCountLabel"   
+                 Text="Obecna ilość zdjęć: "
+                 FontSize="25"
+                 HorizontalOptions="Center"
+                Margin="10"/>
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <Button 
+                      Text="Poprzednia strona"
+                      BackgroundColor="CadetBlue"
+                      TextColor="White"
+                      WidthRequest="150"
+                    Margin="5"/>
+                <Button 
+                      Text="Następna strona"
+                      BackgroundColor="CadetBlue"
+                      TextColor="White"
+                      WidthRequest="150"
+                    Margin="5"/>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>
