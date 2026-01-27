@@ -1,0 +1,13 @@
+1. Bo wyświetla klawiaturę dostosowaną do wpisywania adresów e-mail (np. @, .com).
+
+2. Przycisk czyszczenia pojawia się tylko podczas edytowania pola i gdy jest w nim tekst.
+
+3. Completed uruchamia się po naciśnięciu Enter na klawiaturze, a Clicked po kliknięciu przycisku.
+
+4. Bo Editor obsługuje wieloliniowy, dłuższy tekst.
+
+5. Aby zablokować rejestrację, dopóki formularz nie zostanie poprawnie wypełniony.
+
+6. Tekst „Akceptuję regulamin”, gdzie słowo „regulamin” jest niebieskie i podkreślone.
+
+Credits: chatgpt - pomogl mi w analizie i wytlumaczyl działanie kodu krok po kroku

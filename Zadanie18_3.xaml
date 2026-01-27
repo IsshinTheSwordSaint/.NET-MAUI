@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Zadania.Zadanie18_3"
+             Title="Zadanie18_3">
+    <VerticalStackLayout>
+        <VerticalStackLayout>
+        <Label 
+            Text="Powiadomienia"
+            FontSize="Large"
+            HorizontalOptions="Center"
+         />
+        <HorizontalStackLayout
+            HorizontalOptions="Center"
+            Spacing="20"
+            >
+            <Label
+                Text="Włącz powiadomienia push"
+                FontSize="Medium"
+                VerticalOptions="Center"/>
+            <Switch
+            x:Name="PowiadomieniaPush"/>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout
+            HorizontalOptions="Center"
+            Spacing="20"
+            >
+            <Label
+        Text="Włącz powiadomienia e-mail"
+        FontSize="Medium"
+        VerticalOptions="Center"/>
+            <Switch
+        x:Name="PowiadomieniaEmail"/>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout
+        HorizontalOptions="Center"
+        Spacing="20"
+        >
+            <Label
+                Text="Włącz powiadomienia SMS"
+                FontSize="Medium"
+                VerticalOptions="Center"/>
+            <Switch
+                x:Name="PowiadomieniaSMS"/>
+        </HorizontalStackLayout>
+        </VerticalStackLayout>
+
+
+        <VerticalStackLayout>
+            <Label 
+                Text="Wyglad"
+                FontSize="Large"
+                HorizontalOptions="Center"
+            />
+            <HorizontalStackLayout
+                HorizontalOptions="Center"
+                Spacing="20"
+                >
+                <Label
+                    Text="Tryb ciemny"
+                    FontSize="Medium"
+                    VerticalOptions="Center"/>
+                <Switch
+                x:Name="TrybCiemny"/>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout
+                HorizontalOptions="Center"
+                Spacing="20"
+                >
+                <Label
+                    Text="Rozmiar czcionki "
+                    FontSize="Medium"
+                    VerticalOptions="Center"/>
+                <Slider
+                    WidthRequest="150"
+                    Maximum="24"
+                    Minimum="12"
+                    Value="16"
+                x:Name="Czcionka"
+                    />
+                <Label
+                    Text="{Binding Source={x:Reference Czcionka}, Path=Value, StringFormat='{}{0:F0}'}"
+                    VerticalOptions="Center"/>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+
+        <VerticalStackLayout>
+            <Label 
+                Text="Prywatność"
+                HorizontalOptions="Center"
+                FontSize="Large"
+                />
+            <HorizontalStackLayout
+                HorizontalOptions="Center"
+                Spacing="20"
+                >
+                <Label
+                    Text="Udostępniaj dane analityczne"
+                    FontSize="Medium"
+                    VerticalOptions="Center"/>
+                <CheckBox
+                x:Name="UdostepnianieDanych"/>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                HorizontalOptions="Center"
+                Spacing="20"
+            >
+                <Label
+                    Text="Personalizowane reklamy"
+                    FontSize="Medium"
+                    VerticalOptions="Center"/>
+                <CheckBox
+                x:Name="Reklamy"/>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+        <Label
+                Text="Stopka"
+            HorizontalOptions="Center"
+                FontSize="Large"
+                />
+        <HorizontalStackLayout
+            HorizontalOptions="Center"
+            Spacing="20"
+            >
+            <Button
+                Text="Zapisz ustawienia"
+                Clicked="alert"
+                BackgroundColor="CadetBlue"
+            />
+            <Button
+                Text="Przywróć domyślne"
+                BackgroundColor="Gray"
+            />
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>

@@ -8,11 +8,23 @@
     FlyoutBehavior="Flyout">
 
     <TabBar>
+        <Tab Title=" 18.3">
+            <ShellContent
+            Title="Zad 18.3"
+            ContentTemplate="{DataTemplate local:Zadanie18_3}"
+            Route="Zadanie18_3" />
+        </Tab>
+        <Tab Title=" 18.2">
+            <ShellContent
+            Title="Zad 18.2"
+            ContentTemplate="{DataTemplate local:Zadanie18_2}"
+            Route="Zadanie18_2" />
+        </Tab>
         <Tab Title=" 17.4">
             <ShellContent
-        Title="Zad 17.4"
-        ContentTemplate="{DataTemplate local:Zadanie17_4}"
-        Route="Zadanie17_4" />
+            Title="Zad 17.4"
+            ContentTemplate="{DataTemplate local:Zadanie17_4}"
+            Route="Zadanie17_4" />
         </Tab>
         <Tab Title=" 17.3">
             <ShellContent
