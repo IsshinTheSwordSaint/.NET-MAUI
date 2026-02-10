@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Zadania.Zadanie18_4"
+             Title="Zadanie18_4">
+
+    <ScrollView>
+        <VerticalStackLayout>
+            <VerticalStackLayout>
+                <Label
+                HorizontalOptions="Center"
+                Text="Wprowadzenie danych:" 
+                FontSize="Large"
+                FontAttributes="Bold"/>
+                <Entry
+                Placeholder="Kwota"
+                x:Name="Kwota"
+                Keyboard="Numeric"
+                Text="{Binding Kwota, Mode=OneWayToSource}"
+                />
+                <Slider
+                x:Name="SliderNapiwek"
+                Minimum="0"
+                Maximum="30"
+                Value="{Binding Napiwek, Mode=OneWayToSource}"/>
+                <Label
+                Text="{Binding Source={x:Reference SliderNapiwek},
+                Path=Value, StringFormat='{0:F0} %'}"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout>
+                <HorizontalStackLayout>
+                    <Label
+                    VerticalOptions="Center"
+                    Text="Podziel rachunek "
+                    FontSize="Medium"
+                    Margin="6"/>
+                    <Switch
+                    x:Name="Switch"
+                    Toggled="Switch_Toggled"/>
+
+                </HorizontalStackLayout>
+                <Entry
+                IsVisible="Hidden"
+                Placeholder="Liczba osób"
+                x:Name="LiczbaOsob"
+                Text="{Binding LiczbaOsob, Mode=OneWayToSource}"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout>
+                <Label
+                    Text="{Binding Napiwek, Mode=OneWay, StringFormat='Napiwek: {0:F2} zł '}"
+                    FontSize="Medium"
+                    Margin="6"/>
+                <Label
+                    Text="{Binding Suma, Mode=OneWay, StringFormat='Suma: {0:F2} zł '}"
+                    FontSize="Medium"
+                    Margin="6"/>
+                <Label
+                    Text="{Binding NaOsobe, Mode=OneWay, StringFormat='Na osobę: {0:F2} zł '}"
+                    FontSize="Medium"
+                    IsVisible="Hidden"
+                    Margin="6"
+                    x:Name="NaOsobki"/>
+            </VerticalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

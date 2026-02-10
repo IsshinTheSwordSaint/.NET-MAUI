@@ -45,3 +45,15 @@ public partial class Zadanie18_3 : ContentPage
 
     }
 }
+/*
+ ************************************************************************
+  nazwa funkcji: alert
+  opis funkcji: Funkcja zbiera informacje o zaznaczonych ustawieniach,
+  a nastêpnie wyœwietla je w oknie alertu
+  parametry: object sender, EventArgs e
+  
+  zwracany typ i opis: void - funkcja nie zwraca ¿adnej wartoœci
+  autor: Ja
+ ************************************************************************
+ * 
+ */
