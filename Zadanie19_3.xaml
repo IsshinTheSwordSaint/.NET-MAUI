@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Zadania.Zadanie19_3"
+             Title="Zadanie19_3">
+    <VerticalStackLayout
+        HorizontalOptions="Center">
+        <Label 
+            Text="Rozmiar pizzy"
+            FontSize="Large"/>
+        <VerticalStackLayout RadioButtonGroup.GroupName="rozmiarPizzy" 
+                             RadioButtonGroup.SelectedValue="{Binding selectedPizza, Mode=TwoWay}">
+            <RadioButton Content="Mała (25 cm) - 20 zł" Value="25 cm" CheckedChanged="onOptionChanged"/>
+            <RadioButton Content="Średnia (32 cm) - 28 zł" Value="32 cm" CheckedChanged="onOptionChanged"/>
+            <RadioButton Content="Duża (45 cm) - 38 zł" Value="45 cm" CheckedChanged="onOptionChanged"/>
+        </VerticalStackLayout>
+
+        <Label 
+            Text="Rodzaje ciasta"
+            FontSize="Large"/>
+        <VerticalStackLayout RadioButtonGroup.GroupName="ciasto">
+            <RadioButton Content="Cienkie" Value="cienkie"/>
+            <RadioButton Content="Grube" Value="grube"/>
+            <RadioButton Content="Z serem w brzegu (+5zł)" Value="5" x:Name="ZSerem" CheckedChanged="onOptionChanged"/>
+        </VerticalStackLayout>
+        <Label 
+            Text="Ilość"
+            FontSize="Large"/>
+        <HorizontalStackLayout>
+            <Stepper x:Name="quantityStepper"
+                     Minimum="1"
+                     Maximum="10"
+                     Increment="1"
+                     Value="1"
+                     ValueChanged="onOptionChanged"/>
+            <Label x:Name="quantityLabel"
+                   FontSize="Medium"
+                   Margin="5"
+                   Text="{Binding Source={x:Reference quantityStepper}, Path=Value}"/>
+        </HorizontalStackLayout>
+        <Label 
+            Text="Godzina dostawy"
+            FontSize="Large"/>
+        <VerticalStackLayout>
+            <TimePicker x:Name="MyTimePicker"
+               Format="HH:mm"/>
+        </VerticalStackLayout>
+        <VerticalStackLayout>
+            <Label
+                FontSize="18"
+                x:Name="resultLabel"
+                TextColor="Red">
+            </Label>
+        </VerticalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>
