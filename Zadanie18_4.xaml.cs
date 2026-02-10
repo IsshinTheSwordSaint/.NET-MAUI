@@ -24,6 +24,21 @@ namespace Zadania;
             LiczbaOsob.IsVisible = false;
         }
     }
+    private async void Napiwek10(object sender, EventArgs e)
+    {
+        SliderNapiwek.Value = 10;
+    }
+
+    private async void Napiwek15(object sender, EventArgs e)
+    {
+        SliderNapiwek.Value = 15;
+    }
+
+    private async void Napiwek20(object sender, EventArgs e)
+    {
+        SliderNapiwek.Value = 20;
+    }
+
     public class WynikiViewModel : INotifyPropertyChanged
     {
         private double _Kwota { get; set; } = 0; 
@@ -84,8 +99,7 @@ namespace Zadania;
                 return Math.Round((Suma / LiczbaOsob), 2);
             }
         }
-
-
+     
         public event PropertyChangedEventHandler? PropertyChanged;
         protected void OnPropertyChanged([CallerMemberName] string? name = null) =>
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));

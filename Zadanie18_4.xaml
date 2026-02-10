@@ -22,7 +22,7 @@
                 x:Name="SliderNapiwek"
                 Minimum="0"
                 Maximum="30"
-                Value="{Binding Napiwek, Mode=OneWayToSource}"/>
+                Value="{Binding Napiwek, Mode=TwoWay}"/>
                 <Label
                 Text="{Binding Source={x:Reference SliderNapiwek},
                 Path=Value, StringFormat='{0:F0} %'}"/>
@@ -63,7 +63,29 @@
                     Margin="6"
                     x:Name="NaOsobki"/>
             </VerticalStackLayout>
-
+            
+            <HorizontalStackLayout
+                Margin="6">
+                <Button
+                    x:Name="Button10"
+                Text="1O%"
+                Clicked="Napiwek10"
+                TextColor="White"
+                    BackgroundColor="DeepSkyBlue"/>
+                <Button
+                    x:Name="Button15"
+                Text="15%"
+                Clicked="Napiwek15"
+                TextColor="White"
+                    BackgroundColor="DeepSkyBlue"/>
+                <Button
+                    x:Name="Button20"
+                Text="20%"
+                Clicked="Napiwek20"
+                TextColor="White"
+                    BackgroundColor="DeepSkyBlue"/>
+            </HorizontalStackLayout>
+            
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
