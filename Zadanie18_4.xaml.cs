@@ -3,13 +3,13 @@ using System.Runtime.CompilerServices;
 
 namespace Zadania;
 
-	public partial class Zadanie18_4 : ContentPage
-	{
-		public Zadanie18_4()
-		{
-			BindingContext = new WynikiViewModel();
-			InitializeComponent();
-		}
+public partial class Zadanie18_4 : ContentPage
+{
+    public Zadanie18_4()
+    {
+        BindingContext = new WynikiViewModel();
+        InitializeComponent();
+    }
 
     private async void Switch_Toggled(object sender, ToggledEventArgs e)
     {
@@ -41,11 +41,11 @@ namespace Zadania;
 
     public class WynikiViewModel : INotifyPropertyChanged
     {
-        private double _Kwota { get; set; } = 0; 
-        private double _Napiwek { get; set; } = 15 ;
+        private double _Kwota { get; set; } = 0;
+        private double _Napiwek { get; set; } = 15;
         private int _LiczbaOsob { get; set; } = 1;
 
-        
+
         public double Kwota
         {
             get => _Kwota;
@@ -99,7 +99,7 @@ namespace Zadania;
                 return Math.Round((Suma / LiczbaOsob), 2);
             }
         }
-     
+
         public event PropertyChangedEventHandler? PropertyChanged;
         protected void OnPropertyChanged([CallerMemberName] string? name = null) =>
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));

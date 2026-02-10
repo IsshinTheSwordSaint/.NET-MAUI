@@ -22,7 +22,7 @@
                 x:Name="SliderNapiwek"
                 Minimum="0"
                 Maximum="30"
-                Value="{Binding Napiwek, Mode=TwoWay}"/>
+                Value="{Binding Napiwek, Mode=OneWayToSource}"/>
                 <Label
                 Text="{Binding Source={x:Reference SliderNapiwek},
                 Path=Value, StringFormat='{0:F0} %'}"/>
