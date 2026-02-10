@@ -1,0 +1,13 @@
+1. Bo Picker wyświetla listę obiektów, a ItemDisplayBinding wskazuje, którą właściwość obiektu (np. Name) ma pokazać jako tekst.
+
+2. Oznacza brak zaznaczonego elementu w Pickerze, np. przy starcie aplikacji lub po wyczyszczeniu wyboru.
+
+3. Ponieważ RadioButtony z tym samym GroupName należą do jednej grupy i tylko jeden może być zaznaczony.
+
+4. Value przechowuje wartość logiczną lub danych (np. koszt), a Content jest tekstem wyświetlanym użytkownikowi.
+
+5. Aby uniemożliwić wybór daty wcześniejszej niż dzisiejsza.
+
+6. Ponieważ ilość produktu nie może wynosić 0, więc minimalna wartość to 1.
+
+Credits: chatgpt - pomogl mi w analizie i wytlumaczyl działanie kodu krok po kroku
