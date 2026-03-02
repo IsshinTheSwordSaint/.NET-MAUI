@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Zadania.Zadanie19_4"
+             Title="Zadanie19_4">
+    <VerticalStackLayout>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Entry x:Name="nameSurnameEntry"
+               Placeholder="Podaj swoje imię i nazwisko"
+               TextChanged="calculatePrice"/>
+            <Entry x:Name="emailEntry"
+               Placeholder="Podaj swój email"
+               Keyboard="Email"
+               TextChanged="calculatePrice"/>
+            <Picker x:Name="itemPicker" SelectedIndexChanged="calculatePrice">
+                <Picker.Items >
+                    <x:String>Google</x:String>
+                    <x:String>Tesla</x:String>
+                    <x:String>Bmw</x:String>
+                    <x:String>Meta</x:String>
+                    <x:String>XTB</x:String>
+                    <x:String>Inna</x:String>
+                </Picker.Items>
+            </Picker>
+        </VerticalStackLayout>
+        <VerticalStackLayout>
+            <DatePicker x:Name="MyDatePicker"
+                        Format="dd.MM.yyyy"/>
+            <VerticalStackLayout RadioButtonGroup.GroupName="packet"
+                                  RadioButtonGroup.SelectedValue="{Binding selectedPacket, Mode=TwoWay}">
+                <RadioButton Content="Basic (wstęp + materiały)" Value="Basic" CheckedChanged="calculatePrice"/>
+                <RadioButton Content="Standard (+ lunch)" Value="Standard"  CheckedChanged="calculatePrice"/>
+                <RadioButton Content="Premium (+ warsztat)" Value="Premium"  CheckedChanged="calculatePrice"/>
+            </VerticalStackLayout>
+            <Stepper x:Name="additionalPepole"
+                         Minimum="0"
+                         Maximum="3"
+                         Increment="1"
+                         Value="0"
+                         ValueChanged="calculatePrice"/>
+            <Label x:Name="additionalPeopleLabel"
+                   Text="{Binding Source={x:Reference additionalPepole}, Path=Value, StringFormat='Dodatkowe osoby: {0}'}"/>
+        </VerticalStackLayout>
+        <VerticalStackLayout>
+            <Label x:Name="resultLabel"
+                   FontSize="20"/>
+            <Button Text="Zarejestruj się"
+                   Clicked="Register"/>
+        </VerticalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>
