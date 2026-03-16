@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Zadania.Zadanie20_2"
+             Title="Zadanie20_2">
+    <VerticalStackLayout>
+        <Image
+            Aspect="AspectFit"
+            HorizontalOptions="Center"
+            Source="dotnet_bot.png"
+            HeightRequest="200"
+        />
+        <Image
+            Aspect="AspectFit"
+            HorizontalOptions="Center"
+            HeightRequest="300">
+            <Image.Source>
+                <UriImageSource Uri="https://yt3.ggpht.com/VckpbT6m8z08D39Ejx1grwr6M3l81pGA0twcLCkn9gKGEl-zEvv_5C4FP_-RoJDUERTprx3Fc_Ub=s640-c-fcrop64=1,000029eaffffd615-rw-nd-v1"
+                                CachingEnabled="True"
+                                CacheValidity="7:00:00:00" 
+                />
+            </Image.Source>
+        </Image>
+    </VerticalStackLayout>
+</ContentPage>

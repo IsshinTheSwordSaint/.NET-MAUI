@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Zadania.Zadanie20_3"
+             Title="Zadanie20_3">
+    <VerticalStackLayout>
+
+        <Image HeightRequest="250"
+               x:Name="mainImage">
+                <Image.Source>
+                <UriImageSource Uri="https://yt3.ggpht.com/2ahehHxBpt7jgSTdmTRvjo8uhplueTATwBK7Yqikgj88f4yOeGUztGtG4EGfUulwy14QP4yIf3hgL4o=s640-c-fcrop64=1,00002705ffffd8fa-rw-nd-v1"
+        CacheValidity="10:00:00:00"
+                            />
+                </Image.Source>
+            </Image>
+            <Image
+            HeightRequest="200"
+            Source="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExamw4M3I1dm9sd256YnQ2emdsbWloeWExeTc5dGxnZXhvbDB0MDJ6ZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/bIEzoZX0qJaG6s6frc/giphy.gif"
+               IsAnimationPlaying="True"/>
+            <ImageButton
+            Source="dotnet_bot.png"
+            HeightRequest="50"
+            Clicked="changeMainImgAspect"/>
+            <Label
+            x:Name="aspectLabel"
+            Text="Aktualny tryb wyświetlania to AspectFit "/>
+            <Label
+          Text="{Binding Source={x:Reference mainImage}, Path=IsLoading}"
+            />
+    </VerticalStackLayout>
+</ContentPage>

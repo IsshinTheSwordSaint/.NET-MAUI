@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Zadania.Zadanie20_4"
+             Title="Zadanie20_4">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label Text="Galeria zdjęć" 
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   Margin="6"/>
+
+            <CollectionView ItemsSource="{Binding Images}"
+                            SelectionMode="None"
+                            Margin="6">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical" Span="2" />
+                </CollectionView.ItemsLayout>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Padding="4" Margin="6" HasShadow="False" BorderColor="LightGray">
+                            <Image Source="{Binding .}"
+                                   Aspect="AspectFill"
+                                   HeightRequest="180"
+                                   WidthRequest="180">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="Image_Tapped" NumberOfTapsRequired="1" />
+                                </Image.GestureRecognizers>
+                            </Image>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+                <CollectionView.EmptyView>
+                    <Label Text="Brak zdjęć do wyświetlenia" HorizontalOptions="Center" />
+                </CollectionView.EmptyView>
+            </CollectionView>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
