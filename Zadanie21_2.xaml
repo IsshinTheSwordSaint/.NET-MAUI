@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Zadania.Zadanie21_2"
+             Title="Zadanie21_2">
+    <VerticalStackLayout
+        Padding="30,0"
+            Spacing="25">
+        <Label
+            Text="Zaloguj się"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Entry
+            x:Name="emailEntry"
+         Keyboard="Email"   
+            Placeholder="Email"
+            
+            />
+        <Entry
+            x:Name="passwordEntry"
+            IsPassword="True"
+            Placeholder="Haslo"/>
+        <Button
+            x:Name="loginButton"
+            Text="Zaloguj się"/>
+    </VerticalStackLayout>
+</ContentPage>

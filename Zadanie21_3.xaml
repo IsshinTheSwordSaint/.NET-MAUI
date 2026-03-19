@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Zadania.Zadanie21_3"
+             Title="Zadanie21_3">
+    <VerticalStackLayout>
+        <Grid
+    ColumnDefinitions="Auto,*"
+    RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
+    ColumnSpacing="0"
+    RowSpacing="0">
+
+            <Label
+                
+        Grid.Row="0"
+        Grid.Column="0"
+        Text="Wpisz swoje imię:"/>
+
+            <Entry
+        Grid.Row="1"
+        Grid.Column="1"
+        x:Name="NameEntry"
+        Placeholder="imię"
+        FontSize="18"
+        MaxLength="50"/>
+
+            <Label
+        Grid.Row="2"
+        Grid.Column="0"
+        Text="Wpisz swój adres E-Mail:"/>
+
+            <Entry
+        Grid.Row="3"
+        Grid.Column="1"
+        x:Name="EmailEntry"
+        Placeholder="E-Mail"
+        Keyboard="Email"/>
+
+            <Label
+        Grid.Row="4"
+        Grid.Column="0"
+        Text="Wpisz swoje hasło:"/>
+
+            <Entry
+        Grid.Row="5"
+        Grid.Column="1"
+        x:Name="PasswordEntry"
+        IsPassword="True"
+        MaxLength="50"/>
+
+            <Label
+        Grid.Row="6"
+        Grid.Column="0"
+        Text="Wybierz swoją datę urodzenia:"/>
+
+            <DatePicker
+        Grid.Row="7"
+        Grid.Column="1"
+        x:Name="DatePick"
+        MinimumDate="1950-01-01"
+        MaximumDate="2006-12-31"/>
+
+        </Grid>
+        <Label
+            Text="Wybierz swoją płeć: "/>
+        <Picker 
+            x:Name="CountryPicker">
+            <Picker.Items>
+                <x:String>Kobieta</x:String>
+                <x:String>Mężczyzna</x:String>
+                <x:String>Inna</x:String>
+            </Picker.Items>
+        </Picker>
+        <Label
+            Text="Akceptuję warunki użytkowania"/>
+        <CheckBox
+            x:Name="AcceptCheckBox"
+            CheckedChanged="isCheckBoxChecked"/>
+        <Button
+            x:Name="RegisterButton"
+            IsVisible="False"
+            Text="Zarejestruj się"
+            Clicked="register"/>
+    </VerticalStackLayout>
+</ContentPage>
