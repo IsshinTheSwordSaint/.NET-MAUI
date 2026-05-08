@@ -1,0 +1,10 @@
+1.Keyboard="Url" – ustawia klawiaturę zoptymalizowaną do wpisywania adresów URL (łatwy dostęp do znaków takich jak /, ., czasem przycisk .com).
+
+2.ClearButtonVisibility="WhileEditing" – pokazuje przycisk czyszczenia pola tylko wtedy, gdy użytkownik edytuje tekst i w polu coś już jest.
+
+3.Zamiast Return pojawia się przycisk „Go”, ponieważ ustawiono ReturnType="Go" – sugeruje on przejście do wpisanego adresu.
+
+4.Nie, użytkownik nie może wpisać 300 znaków, ponieważ MaxLength="255" ogranicza wpis do maksymalnie 255 znaków.
+
+5.Przed wpisaniem tekstu w polu pojawia się „https://example.com”
+, ponieważ jest to wartość właściwości Placeholder.
