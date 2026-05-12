@@ -14,7 +14,7 @@ public partial class Zadanie24_3 : ContentPage
 		InitializeComponent();
         Przegladarka.ItemsSource = MojePliki;
         BindingContext = new Binding();
-    LoadFiles();
+        LoadFiles();
 
     }
 
